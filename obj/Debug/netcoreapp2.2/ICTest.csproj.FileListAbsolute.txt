@@ -14,5 +14,5 @@
 /Users/Rishabh/Projects/ICTest/obj/Debug/netcoreapp2.2/ICTest.RazorTargetAssemblyInfo.cache
 /Users/Rishabh/Projects/ICTest/obj/Debug/netcoreapp2.2/ICTest.dll
 /Users/Rishabh/Projects/ICTest/obj/Debug/netcoreapp2.2/ICTest.pdb
-/Users/Rishabh/Projects/ICTest/bin/Debug/netcoreapp2.2/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 /Users/Rishabh/Projects/ICTest/obj/Debug/netcoreapp2.2/ICTest.csprojAssemblyReference.cache
+/Users/Rishabh/Projects/ICTest/bin/Debug/netcoreapp2.2/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll

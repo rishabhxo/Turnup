@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "ff4ff732d1650164184963d96464b6a8348732af"
+    "signature": "0cbf3dc1d41758761cf7cb9b079eaf07f2b08222"
   },
   "compilationOptions": {
     "defines": [
@@ -24,17 +24,21 @@
     ".NETCoreApp,Version=v2.2": {
       "ICTest/1.0.0": {
         "dependencies": {
+          "ExcelDataReader": "3.6.0",
+          "ExcelDataReader.DataSet": "3.6.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "NUnit": "3.12.0",
+          "NUnit.Runners": "3.10.0",
           "NUnit3TestAdapter": "3.13.0",
           "Selenium.Opera.WebDriver": "2.30.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "75.0.3770.90",
           "SpecFlow": "3.0.225",
-          "SpecFlow.NUnit": "3.0.225"
+          "SpecFlow.NUnit": "3.0.225",
+          "SpecFlow.Tools.MsBuild.Generation": "3.0.225"
         },
         "runtime": {
           "ICTest.dll": {}
@@ -52,6 +56,31 @@
         },
         "compile": {
           "lib/netstandard2.0/BoDi.dll": {}
+        }
+      },
+      "ExcelDataReader/3.6.0": {
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        }
+      },
+      "ExcelDataReader.DataSet/3.6.0": {
+        "dependencies": {
+          "ExcelDataReader": "3.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {}
         }
       },
       "Gherkin/6.0.0": {
@@ -398,6 +427,27 @@
           "lib/netstandard2.0/nunit.framework.dll": {}
         }
       },
+      "NUnit.Console/3.10.0": {
+        "dependencies": {
+          "NUnit.ConsoleRunner": "3.10.0",
+          "NUnit.Extension.NUnitProjectLoader": "3.6.0",
+          "NUnit.Extension.NUnitV2Driver": "3.7.0",
+          "NUnit.Extension.NUnitV2ResultWriter": "3.6.0",
+          "NUnit.Extension.TeamCityEventListener": "1.0.6",
+          "NUnit.Extension.VSProjectLoader": "3.8.0"
+        }
+      },
+      "NUnit.ConsoleRunner/3.10.0": {},
+      "NUnit.Extension.NUnitProjectLoader/3.6.0": {},
+      "NUnit.Extension.NUnitV2Driver/3.7.0": {},
+      "NUnit.Extension.NUnitV2ResultWriter/3.6.0": {},
+      "NUnit.Extension.TeamCityEventListener/1.0.6": {},
+      "NUnit.Extension.VSProjectLoader/3.8.0": {},
+      "NUnit.Runners/3.10.0": {
+        "dependencies": {
+          "NUnit.Console": "3.10.0"
+        }
+      },
       "NUnit3TestAdapter/3.13.0": {
         "dependencies": {
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
@@ -458,6 +508,11 @@
         },
         "compile": {
           "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {}
+        }
+      },
+      "SpecFlow.Tools.MsBuild.Generation/3.0.225": {
+        "dependencies": {
+          "SpecFlow": "3.0.225"
         }
       },
       "System.ComponentModel/4.3.0": {
@@ -3864,6 +3919,20 @@
       "path": "bodi/1.4.1",
       "hashPath": "bodi.1.4.1.nupkg.sha512"
     },
+    "ExcelDataReader/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
+      "path": "exceldatareader/3.6.0",
+      "hashPath": "exceldatareader.3.6.0.nupkg.sha512"
+    },
+    "ExcelDataReader.DataSet/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-miW3sWmPXnLM38YadRIfnhL4W4QZajpS6Q/OqsOpFJU5ct8h+M/fMpbGMm5INtsMP0Y1k0WK0stIfSW3RP31Xg==",
+      "path": "exceldatareader.dataset/3.6.0",
+      "hashPath": "exceldatareader.dataset.3.6.0.nupkg.sha512"
+    },
     "Gherkin/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3920,6 +3989,62 @@
       "path": "nunit/3.12.0",
       "hashPath": "nunit.3.12.0.nupkg.sha512"
     },
+    "NUnit.Console/3.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0rXBXAANKJJfkgMmFDG2obCH2it/xuYadEvyTwAIgkaDTwaqhko9KfT2QQLtXDyoAqXxJtrckA0xA5cC5CpmyA==",
+      "path": "nunit.console/3.10.0",
+      "hashPath": "nunit.console.3.10.0.nupkg.sha512"
+    },
+    "NUnit.ConsoleRunner/3.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NBnFgApGC7+nP688/j033CYTqTfwnIx0wqjrODtoznwZ2lxKqvLxjxNsO9XstgmC5sUBSU2QsLVYd/9IJueMDQ==",
+      "path": "nunit.consolerunner/3.10.0",
+      "hashPath": "nunit.consolerunner.3.10.0.nupkg.sha512"
+    },
+    "NUnit.Extension.NUnitProjectLoader/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ev2+dCJShMNIATkYNm/vHEuieBfbismr9DcUfBvafJZf5vNyugXPuMXO/MaOFcJaoW9j6/zjMmXKG7R5umWzXA==",
+      "path": "nunit.extension.nunitprojectloader/3.6.0",
+      "hashPath": "nunit.extension.nunitprojectloader.3.6.0.nupkg.sha512"
+    },
+    "NUnit.Extension.NUnitV2Driver/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vzeISBXjBdGX3Jpg4qpa6jtT8y8aq6fFDVeIb42BcKY8XGv5d+S39Zl7eiqoQSHxdFGrW8L8B/v75hfCeejdHA==",
+      "path": "nunit.extension.nunitv2driver/3.7.0",
+      "hashPath": "nunit.extension.nunitv2driver.3.7.0.nupkg.sha512"
+    },
+    "NUnit.Extension.NUnitV2ResultWriter/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P/Nc+wgFRe3dT59/VjhiIT0SWfLMbb/Vc9AtBU3L71VOCs8zQnuNjCOEFLQL/Mq6XSaZeB2Sug9tUgTfCnQk9w==",
+      "path": "nunit.extension.nunitv2resultwriter/3.6.0",
+      "hashPath": "nunit.extension.nunitv2resultwriter.3.6.0.nupkg.sha512"
+    },
+    "NUnit.Extension.TeamCityEventListener/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ygK9/EmKuR8ke+cuToDV+rKYn9nKZRCEtQ0SMcDtJYuvQj9b41GsWI7IbG2VBHrC5cd2m2jUidWB9q/NQfINdw==",
+      "path": "nunit.extension.teamcityeventlistener/1.0.6",
+      "hashPath": "nunit.extension.teamcityeventlistener.1.0.6.nupkg.sha512"
+    },
+    "NUnit.Extension.VSProjectLoader/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CIScV9a7+wUu6Ylb+WO0q/WGWQVoB05TUj3XZHa1CO+2BInDdfIVkqtlrSguhy6D/AGIMaLVrCZpQkQ2m0bbzQ==",
+      "path": "nunit.extension.vsprojectloader/3.8.0",
+      "hashPath": "nunit.extension.vsprojectloader.3.8.0.nupkg.sha512"
+    },
+    "NUnit.Runners/3.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z+NYf35JUr0ozwh5ykoFbcH96PVSt42eDrn5t1JfCF3/wCSeaHRv+3eVJDC9zZN7zaO80q8dzAhi1tc34kH3Zw==",
+      "path": "nunit.runners/3.10.0",
+      "hashPath": "nunit.runners.3.10.0.nupkg.sha512"
+    },
     "NUnit3TestAdapter/3.13.0": {
       "type": "package",
       "serviceable": true,
@@ -3961,6 +4086,13 @@
       "sha512": "sha512-FmDY6x/V4YOk0jp7Lsk2v6uqGsRSRdF9N31OYbrY/hNd98AL7SFeuHco8U6VVwu3fc0YAKS5stULGtRPA7983g==",
       "path": "specflow.nunit/3.0.225",
       "hashPath": "specflow.nunit.3.0.225.nupkg.sha512"
+    },
+    "SpecFlow.Tools.MsBuild.Generation/3.0.225": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-drMBK7iFdjeLr2bCF/xc2klpZ1wi/5yEwnzC8kBH9CdsUuWvh8BjyQfFxx/zbw9iMhxMYA8b2T09NU/p4wG0Fg==",
+      "path": "specflow.tools.msbuild.generation/3.0.225",
+      "hashPath": "specflow.tools.msbuild.generation.3.0.225.nupkg.sha512"
     },
     "System.ComponentModel/4.3.0": {
       "type": "package",

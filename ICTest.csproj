@@ -14,15 +14,34 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
-    <PackageReference Include="SpecFlow" Version="2.4.1" />
+    <PackageReference Include="SpecFlow" Version="3.0.225" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.0.225" />
+    <PackageReference Include="NUnit.Runners" Version="3.10.0" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Pages\" />
     <Folder Include="Test\" />
+    <Folder Include="Feature\" />
+    <Folder Include="HookUp\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Feature\TM.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TM.feature.cs</LastGenOutput>
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Feature\TM.feature.cs">
+      <DependentUpon>TM.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -16,23 +16,26 @@ using NUnit.Framework;
 
 namespace ICTest
 {
+
     [TestFixture]
+    [Parallelizable(ParallelScope.All)]
     public class Program
     {
+        IWebDriver driver;
         
         [SetUp]
         public void Login()
         {
             //define drivers
-            CommonDrivers.driver = new ChromeDriver(Environment.CurrentDirectory);
+            driver = new ChromeDriver(Environment.CurrentDirectory);
 
             //login action
             Login loginobj = new Login();
-            loginobj.Loginsteps(CommonDrivers.driver);
+            loginobj.Loginsteps(driver);
 
             //Navigate to TM
             Home homeobj = new Home();
-            homeobj.NavigateTM(CommonDrivers.driver);
+            homeobj.NavigateTM(driver);
 
         }
         [Test]
@@ -41,7 +44,16 @@ namespace ICTest
 
             //create new TM
             CreateTM createobj = new CreateTM();
-            createobj.Create(CommonDrivers.driver);
+            createobj.Create(driver);
+
+        }
+        [Test]
+        public void ValidateTM()
+        {
+
+            //Validate TM
+            CreateTM valobj = new CreateTM();
+            valobj.ValidateTM(driver);
 
         }
         [Test]
@@ -49,7 +61,7 @@ namespace ICTest
         {
             //Edit TM
             CreateTM editobj = new CreateTM();
-            editobj.Edit(CommonDrivers.driver);
+            editobj.Edit(driver);
         }
 
         [Test]
@@ -57,14 +69,14 @@ namespace ICTest
         {
             //Delete TM
             CreateTM delobj = new CreateTM();
-            delobj.Del(CommonDrivers.driver);
+            delobj.Del(driver);
         }
 
 
         [TearDown]
         public void Close()
         {
-            CommonDrivers.driver.Quit();
+            driver.Quit();
         }
 
     }
